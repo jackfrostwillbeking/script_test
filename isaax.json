@@ -1,0 +1,12 @@
+{
+  "name": "script_test",
+  "version": "0.0.1",
+  "description": "A simple script test sample",
+  "main": "main.py",
+  "author": "kawasaki",
+  "language":"python",
+  "license": "",
+  "scripts": {
+     "start": "python3 -u main.py"
+    }
+}
