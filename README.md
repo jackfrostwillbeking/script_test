@@ -1,3 +1,3 @@
 # script_test
 
-revision 0.2
+revision 0.3
