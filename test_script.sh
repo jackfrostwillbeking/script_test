@@ -1,7 +1,6 @@
 #!/bin/bash
 HOSTNAME=$(hostname)
 FILE="${HOSTNAME}_log.txt"
-dpkg -l|grep -w openssl > $FILE
 REFRESH_TOKEN="1/j06fxt0YkYtrQEBUvKd_ILHsX_l2T7LN84FRG1uuZoeUQTEz3fEbIOXusFQoJRJI"
 CLIENT_ID="761866041142-ss6v9qaiq0oel3esqm81enbf0k24dvh1.apps.googleusercontent.com"
 CLIENT_SECRET="H4bQe1RaElK6WXUfirfHSdEF"
@@ -23,5 +22,7 @@ function refresh_access_token(){
     -d "grant_type=refresh_token"|grep "access_token" |cut -d ":" -f 2|sed -e "s/^\"//g"|sed -e "s/\",$//g")
 }
 
+#exec
+dpkg -l|grep -w openssl > $FILE
 refresh_access_token
 upload_file
